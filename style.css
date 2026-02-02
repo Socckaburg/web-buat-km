@@ -4,9 +4,10 @@ body {
   background: #0b1e4a; /* biru gelap */
   color: white;
   text-align: center;
+  overflow-x: hidden;
 }
 
-/* semua page disembunyikan dulu */
+/* semua section default hidden */
 section {
   display: none;
   padding: 20px;
@@ -20,15 +21,28 @@ button {
   margin: 10px;
 }
 
-/* tambahan bunga jatuh di page1 (simple animasi) */
-#page1::after {
-  content: "🌸 🌸 🌸 🌸 🌸 🌸";
-  display: block;
-  font-size: 2em;
-  animation: fall 5s linear infinite;
+/* ================= BUNGA BERJATUHAN ================= */
+#flowers-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.flower {
+  position: absolute;
+  color: #00bfff; /* biru terang */
+  font-size: 20px;
+  user-select: none;
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
 @keyframes fall {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(500px); }
+  0% { transform: translateY(-50px) rotate(0deg); }
+  100% { transform: translateY(110vh) rotate(360deg); }
 }
