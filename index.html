@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Romantic Web</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= PAGE 1 ================= -->
+<section id="page1">
+  <h1>this one is for you my baby</h1>
+  <p>haii sayangg aku buat web ini kusus buat kamu di lihat yaaa, oiya pencet icon play dulu biar ada lagunya</p>
+
+  <button onclick="playMusic()">
+    <img src="img/play.png" alt="play" width="80">
+  </button>
+
+  <button onclick="showPage('page2')">
+    <img src="img/next.png" alt="next" width="80">
+  </button>
+</section>
+
+<!-- ================= PAGE 2 ================= -->
+<section id="page2">
+  <p>
+    hai sayangku aku tau ini biasa aja menurut kamu tapi aku buat ini dengan susah payah hehe semoga kamu suka yaa sayang, oiya sayangku maafin aku yaa selama ini gabisa ngasih dan memberi yg terbaik buat kamu. 
+    aku di sini selalu ada buat km, dan aku janji aku gaakan sia siakan kesempatan ini aku akan berjuang dan berusaha untuk kamu. i love you sayangku, makasih yaa sayang udah mau sabar hadapin aku yg gajelas ini.
+  </p>
+
+  <p>Kamu sayang aku ga sayang?</p>
+  <button id="yesBtn" onclick="handleYesNo('yes')">Yes</button>
+  <button id="noBtn" onclick="handleYesNo('no')">No</button>
+  <p id="finalMessage"></p>
+</section>
+
+<!-- ================= MUSIK ================= -->
+<audio id="bgMusic" src="img/onlyone.mp3" loop></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
